@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Nudge 2025</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Initial Pop-up -->
+    <div class="popup" id="initialPopup">
+      <div class="popup-content">
+        <h1>Dive Into the Fun!</h1>
+        <p>
+          Unlock a world of exclusive vibes for just $1—try it for 7 days,
+          cancel anytime with a tap!
+        </p>
+        <button class="cta-btn" onclick="subscribe()">Get My $1 Deal</button>
+        <a href="#" class="decline-link" onclick="showFollowUp()"
+          >No thanks, I’ll stick to the basics</a
+        >
+      </div>
+    </div>
+
+    <!-- Follow-up Pop-up (Hidden Initially) -->
+    <div class="popup hidden" id="followUpPopup">
+      <div class="popup-content">
+        <h1>Hold Up, VIP!</h1>
+        <p>
+          We’d hate for you to miss this—how about 30 days free, just for you?
+        </p>
+        <button class="cta-btn" onclick="subscribe()">
+          Yes, I’ll Take It!
+        </button>
+        <a href="#" class="decline-link" onclick="closePopup()"
+          >No, really, I’m good</a
+        >
+      </div>
+    </div>
+
+    <!-- Confirmation Message (Hidden Initially) -->
+    <div class="popup hidden" id="confirmationPopup">
+      <div class="popup-content">
+        <h1>Welcome to the Party!</h1>
+        <p>
+          You’re in! Get ready for 30 days of pure awesomeness—check your email
+          for details.
+        </p>
+        <button class="cta-btn" onclick="closePopup()">Sweet, Let’s Go!</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
